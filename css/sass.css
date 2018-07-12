@@ -1,3 +1,7 @@
+ * {
+  box-sizing: border-box;
+}
+
 .board {
   height: 100vh;
   width: 100vw;
@@ -6,16 +10,18 @@
   justify-content: center;
   align-items: center;
   background-color: silver;
-}
-.board h1 {
+
+    h1 {
       font-size: 45px;
+      font-style: italic;
       font-weight: 800;
       color: #045757;
       text-transform: capitalize;
       text-shadow: 1px 1px 1px #F3A462;
+
     }
 
-.create-column {
+  .create-column {
     margin: 25px auto;
     border-radius:15%;
     border: none;
@@ -35,14 +41,19 @@
       align-items: center;
       height: 85vh;
       width: 100vw;
-  }
+
+
+
         .column {
           position: relative;
           height: 85vh;
           width: 33vw;
-          background-color: #F3A462;          
+          background-color: #F3A462;
+          /*display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center; */
           border: 5px solid #920606;
-		}
 
           .column-title {
             font-size: 25px;
@@ -56,8 +67,7 @@
           .column-card-list {
             list-style-type: none;
             margin: 40px 40px 0 0;
-			min-height: 15vh;
-		  }
+			min-height: 15vh;			
 
               .card {
                 margin: 0 auto;
@@ -65,7 +75,6 @@
                 height: 15vh;
                 border: 2px solid #B81C1C;
                 background-color: #32A632;
-			  }
 
                 .card-description {
                   font-size: 16px;
@@ -75,8 +84,8 @@
                   text-align: center;
                   padding: 10px;
                   margin-top: 0;
+
                 }
-				
                 .btn-delete {
                   margin: 0 auto;
                   border-radius: 10%;
@@ -89,7 +98,9 @@
                   padding: 15px;
                   text-transform: uppercase;
                 }
-          
+              }
+          }
+
           .column-btn-delete {
             margin: 0 10px;
             border-radius: 10%;
@@ -100,16 +111,19 @@
             font-family: monospace;
             font-weight: 800;
             padding: 15px;
+
             text-transform: uppercase;
           }
-		  
           .add-card {
             @extend .column-btn-delete;
             font-size: 18px;
             background-color: #116A6A;
             color: #F3A462;
             text-transform: none;
-		  }  
+
+          }
+        }
+    }
 
     .card-placeholder {
       width: 30vw;
@@ -117,3 +131,4 @@
       border: 2px dotted #6D0000;
       background-color: #6FD36F;
       }
+}
